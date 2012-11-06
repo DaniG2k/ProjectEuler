@@ -7,8 +7,7 @@ def fib(n):
         f.append(fib)
     return f
 
-# Euclid's Algorithm
-# Greatest Common Divisor
+# Greatest Common Divisor - Euclid's Algorithm
 def gcd(a,b):
     if a < b: a,b = b,a # a always needs to be bigger than b
     if a%b != 0: return gcd(b, a%b)

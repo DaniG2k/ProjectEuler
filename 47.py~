@@ -1,0 +1,19 @@
+#!/usr/bin/python
+from primes_sieve import primefactors
+from time import time
+start = time()
+numfactors = 4
+# The first number to have 4 prime factors
+c = 2*3*5*7
+while True:
+    if len(set(primefactors(c))) == numfactors:
+        if len(set(primefactors(c+1))) == numfactors:
+            if len(set(primefactors(c+2))) == numfactors:
+                if len(set(primefactors(c+3))) == numfactors:
+                    end = time()
+                    print 'Result:',c
+                    print end-start
+                    break
+            else: c+=1
+        else: c+=1
+    c += 1

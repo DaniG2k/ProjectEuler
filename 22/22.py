@@ -1,6 +1,6 @@
 #! /usr/bin/python
-#import time
-#start = time.time()
+#from time import time
+#start = time()
 
 f = open('./names.txt')
 n = f.read()
@@ -33,5 +33,5 @@ for name in names:
 
 print sum(total_score)
 
-#end = time.time()
+#end = time()
 #print 'Time elapsed:',end-start

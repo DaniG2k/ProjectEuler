@@ -27,5 +27,6 @@ def isPrime(n):
 def primefactors(n):
     if n <= 3: return [n,]
     for f in xrange(2,max(3,int(n**.5))+1):
-        if n%f==0: return [f,]+primefactors(n/f)
+        if n%f==0:
+            return [f,]+primefactors(n/f)
     return [n,]
