@@ -1,8 +1,0 @@
-from tools import fib
-from time import time
-start = time()
-
-print sum([i for i in fib(4000000) if i%2==0])
-
-end = time()
-print end-start
