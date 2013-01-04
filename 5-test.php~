@@ -1,0 +1,26 @@
+#!/usr/bin/php -q
+<?php
+passthru('clear');
+$time_start = microtime(true);
+echo "Starting time count: $time_start\n";
+$counter = 1;
+while ( true ){
+	for($i = 1; $i <= 20; $i++) { 			// For each number in the array from 1-10
+		if ( $counter % $i == 0 ){	// If it's evenly divisible
+			if ( $i == 20 ) {
+				$time_end = microtime(true);
+				echo "End time: $time_end\n";
+				$total_time = $time_end - $time_start;
+				echo "\nProgram execution time: $total_time\n";
+				echo "\$i is $i\n";
+				echo "\$counter is $counter\n";
+				echo "Success!\n";
+				return false;
+			}		
+		} else {
+			break;
+		}
+	}
+	$counter++;
+}
+?>
