@@ -2,8 +2,7 @@
 from time import time
 start = time()
 
-counter, digit = 0, 0
-s = ''
+s, counter, digit = '', 0, 0
 
 while digit < (10**6)+1:
     counter += 1

@@ -8,9 +8,7 @@ def isPandigital(num):
         return False
     num_list = [int(d) for d in num]
     num_list.sort()
-    if num_list == [i for i in xrange(1,10)]:
-      return True
-    return False
+    return num_list == [i for i in xrange(1,10)]
 
 for multiplier in xrange(9876,9183,-1):
     concat = ''

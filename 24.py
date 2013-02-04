@@ -10,7 +10,6 @@ from itertools import permutations
 #What is the millionth lexicographic permutation of the digits
 #0, 1, 2, 3, 4, 5, 6, 7, 8 and 9?
 
-concat = ''.join
-l = list(map(concat, permutations('0123456789')))
+l = list(map(''.join, permutations('0123456789')))
 
 print l[999999] #Because 0 is counted as an element too
